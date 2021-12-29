@@ -10,7 +10,6 @@ export const DIRECTION_RIGHT = 'RIGHT'
 export type Tile = {
   id: number,
   score: number,
-  isNew: boolean,
   cellIndex: number,
   willMerge: boolean,
   willRemove: boolean
@@ -51,7 +50,6 @@ export function useGame (options = {
       id: ++tilesCounter,
       score: Math.random() > 0.9 ? 4 : 2,
       cellIndex: selectedCellIndex,
-      isNew: true,
       willMerge: false,
       willRemove: false
     })
@@ -161,8 +159,7 @@ export function useGame (options = {
     tiles.value = tiles.value.map(tile => ({
       ...tile,
       score: tile.willMerge ? tile.score * 2 : tile.score,
-      willMerge: false,
-      isNew: false
+      willMerge: false
     }))
   }
 

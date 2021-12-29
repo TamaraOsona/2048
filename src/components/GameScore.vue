@@ -15,7 +15,7 @@
         <div
           v-for="newScoreValue in newScoreValues"
           :key="newScoreValue.id"
-          class=" text-rose-800 text-sm font-bold"
+          class="text-rose-800 text-sm font-bold"
         >
           +{{ newScoreValue.value }}
         </div>

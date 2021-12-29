@@ -17,10 +17,7 @@
             class="absolute top-0 left-0 p-0.5 w-24 h-24 transition duration-100"
             :style="`transform: translateX(calc(${tile.cellIndex % 4} * 6rem)) translateY(calc(${Math.floor(tile.cellIndex / 4)} * 6rem))`"
           >
-            <Tile
-              :score="tile.score"
-              :is-new="tile.isNew"
-            />
+            <Tile :score="tile.score" />
           </div>
         </template>
       </div>

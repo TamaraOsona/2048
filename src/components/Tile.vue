@@ -12,6 +12,7 @@
       'bg-rose-900 text-gray-100': score === 256,
       'bg-stone-700 text-gray-100': score === 512,
       'bg-stone-900 text-gray-100': score === 1024,
+      'bg-teal-600 text-gray-100': score === 2048
     }"
   >
     {{ score }}
@@ -20,7 +21,6 @@
 
 <script setup lang="ts">
 defineProps<{
-  score: number,
-  isNew: boolean
+  score: number
 }>()
 </script>
